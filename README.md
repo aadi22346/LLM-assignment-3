@@ -2,16 +2,16 @@
 
 # Build-Your-Own SQL Database Agent (From Scratch)
 
-[cite\_start]This project is a lightweight, read-only SQL Database Agent built entirely from scratch, as required for the "Build-Your-Own SQL Database Agent" assignment[cite: 1, 6]. [cite\_start]The agent interprets natural language questions and interacts with a SQL database using a ReAct (Reasoning + Acting) loop[cite: 7, 10].
+This project is a lightweight, read-only SQL Database Agent built entirely from scratch, as required for the "Build-Your-Own SQL Database Agent" assignment. The agent interprets natural language questions and interacts with a SQL database using a ReAct (Reasoning + Acting) loop.
 
-[cite\_start]It is built without any external agent frameworks (like LangChain) and uses only an LLM client library and the standard `sqlite3` library[cite: 8, 25, 26].
+It is built without any external agent frameworks (like LangChain) and uses only an LLM client library and the standard `sqlite3` library.
 
 ## 🚀 Features
 
-  * [cite\_start]**Natural Language to SQL**: Answers natural language questions about the data in a SQL database[cite: 18].
-  * [cite\_start]**ReAct Loop**: Implements the Thought $\rightarrow$ Action $\rightarrow$ Observation loop from scratch to show its reasoning[cite: 10].
-  * [cite\_start]**Schema Discovery**: Can explore the database schema by listing tables and describing their columns[cite: 17].
-  * [cite\_start]**Safe & Read-Only**: The agent is restricted to `SELECT`-only queries and includes a safety validator to prohibit any database mutations[cite: 19, 27, 48].
+  * **Natural Language to SQL**: Answers natural language questions about the data in a SQL database.
+  * **ReAct Loop**: Implements the Thought $\rightarrow$ Action $\rightarrow$ Observation loop from scratch to show its reasoning.
+  * **Schema Discovery**: Can explore the database schema by listing tables and describing their columns.
+  * **Safe & Read-Only**: The agent is restricted to `SELECT`-only queries and includes a safety validator to prohibit any database mutations.
 
 ## ⚙️ How to Run
 
@@ -35,13 +35,13 @@
 
 ## 🛠️ Available Tools
 
-[cite\_start]The agent has access to the following tools, which are documented for the LLM[cite: 41, 45]:
+The agent has access to the following tools, which are documented for the LLM:
 
 | Tool Name | Parameters | Description |
 | :--- | :--- | :--- |
-| **`list_tables`** | None | [cite\_start]Lists all tables available in the database[cite: 38]. |
-| **`describe_table`** | `table_name` (str) | [cite\_start]Returns the schema (columns and types) for a specific table[cite: 39]. |
-| **`query_database`** | `query` (str) | [cite\_start]Executes a single, safe, read-only SQL `SELECT` query[cite: 40]. |
+| **`list_tables`** | None | Lists all tables available in the database. |
+| **`describe_table`** | `table_name` (str) | Returns the schema (columns and types) for a specific table. |
+| **`query_database`** | `query` (str) | Executes a single, safe, read-only SQL `SELECT` query. |
 
 ## 🔬 Example Trace
 
